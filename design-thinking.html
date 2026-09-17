@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Thinking — UX/IHC Lab</title>
+<meta name="description" content="As cinco fases do Design Thinking e sua relação com o desenvolvimento de interfaces.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span>
+      <span class="brand-name">UX/IHC LAB</span>
+    </a>
+    <nav class="tabs" aria-label="Navegação principal">
+      <a class="tab" href="index.html"><span class="num">00</span>Início</a>
+      <a class="tab" href="ihc.html"><span class="num">01</span>IHC</a>
+      <a class="tab" href="design-thinking.html"><span class="num">02</span>Design Thinking</a>
+      <a class="tab" href="heuristicas.html"><span class="num">03</span>Heurísticas</a>
+      <a class="tab" href="wcag.html"><span class="num">04</span>WCAG &amp; Cores</a>
+      <a class="tab" href="uxui-dev.html"><span class="num">05</span>UX/UI Dev</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ruler-wrap"><div class="ruler"></div></div>
+
+<main class="frame">
+  <span class="frame-tag">FRAME 02/05 · DESIGN THINKING</span>
+
+  <section class="hero">
+    <h1>Design Thinking</h1>
+    <p class="lead">Uma forma de resolver problemas colocando quem vai usar a solução no centro do
+    processo, do começo ao fim.</p>
+  </section>
+
+  <article class="content">
+    <h2>O que é</h2>
+    <p>Design Thinking é uma abordagem para resolver problemas complexos que parte da observação real
+    das pessoas envolvidas, em vez de partir direto para a solução técnica. É um processo iterativo —
+    ou seja, não é uma linha reta do início ao fim, mas um ciclo que volta e revisita etapas anteriores
+    sempre que aprende algo novo.</p>
+    <p>No contexto de interfaces, Design Thinking é o que garante que um produto seja construído a
+    partir de um problema real de quem vai usá-lo, e não apenas a partir do que a equipe de
+    desenvolvimento acha que seria interessante construir.</p>
+
+    <h2>As cinco fases</h2>
+    <div class="phases">
+      <div class="phase">
+        <span class="phase-num mono">FASE 01</span>
+        <h3>Empatia</h3>
+        <p>Entender o contexto, as motivações e as dificuldades reais de quem vai usar o produto —
+        por meio de entrevistas, observação e pesquisa de campo, antes de propor qualquer solução.</p>
+      </div>
+      <div class="phase">
+        <span class="phase-num mono">FASE 02</span>
+        <h3>Definição</h3>
+        <p>Organizar o que foi observado na fase anterior e transformar isso em um problema claro e
+        específico a ser resolvido — geralmente escrito como uma afirmação de necessidade do usuário.</p>
+      </div>
+      <div class="phase">
+        <span class="phase-num mono">FASE 03</span>
+        <h3>Ideação</h3>
+        <p>Gerar o maior número possível de ideias para resolver o problema definido, sem julgar
+        viabilidade ainda — a quantidade e a diversidade de ideias importam mais do que a perfeição
+        de cada uma.</p>
+      </div>
+      <div class="phase">
+        <span class="phase-num mono">FASE 04</span>
+        <h3>Prototipação</h3>
+        <p>Construir versões rápidas e baratas das ideias mais promissoras — de um rascunho em papel
+        a um protótipo clicável no Figma — apenas o suficiente para testar a ideia com alguém.</p>
+      </div>
+      <div class="phase">
+        <span class="phase-num mono">FASE 05</span>
+        <h3>Teste</h3>
+        <p>Colocar o protótipo na frente de usuários reais, observar o uso e coletar feedback — que
+        volta para as fases anteriores e alimenta uma nova rodada do ciclo.</p>
+      </div>
+    </div>
+
+    <h2>Duplo diamante</h2>
+    <p>Uma forma comum de visualizar essas cinco fases é o modelo do "duplo diamante": um primeiro
+    diamante que abre (explorar o problema, sem restringir) e depois fecha (definir um problema
+    específico); e um segundo diamante que abre de novo (explorar soluções possíveis) e fecha
+    (convergir em uma solução testada). A ideia central é a mesma em qualquer versão do modelo: expandir
+    antes de restringir, tanto para entender o problema quanto para chegar à solução.</p>
+
+    <h2>Relação com UX/UI</h2>
+    <p>Design Thinking é o processo; UX e UI são, em boa parte, o resultado desse processo aplicado a
+    interfaces digitais. As heurísticas de usabilidade (próximo frame) ajudam a avaliar os protótipos
+    gerados na fase de prototipação, e as diretrizes de acessibilidade (WCAG) entram como um critério
+    que deve estar presente desde a fase de ideação — não como um ajuste de última hora.</p>
+
+    <hr class="section-divider">
+
+    <a class="next-page" href="heuristicas.html">
+      <span>
+        <span class="np-label">PRÓXIMO FRAME · 03/05</span>
+        <span class="np-title">Heurísticas de Nielsen</span>
+      </span>
+      <span class="np-arrow">→</span>
+    </a>
+  </article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>UX/IHC LAB — material de estudo, não afiliado a NN/g, Figma ou W3C.</span>
+    <span>05 frames · HTML, CSS e JS</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

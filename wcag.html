@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WCAG &amp; Paletas de Cores — UX/IHC Lab</title>
+<meta name="description" content="O que é WCAG, seus níveis de conformidade e como testar contraste de cores para acessibilidade.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span>
+      <span class="brand-name">UX/IHC LAB</span>
+    </a>
+    <nav class="tabs" aria-label="Navegação principal">
+      <a class="tab" href="index.html"><span class="num">00</span>Início</a>
+      <a class="tab" href="ihc.html"><span class="num">01</span>IHC</a>
+      <a class="tab" href="design-thinking.html"><span class="num">02</span>Design Thinking</a>
+      <a class="tab" href="heuristicas.html"><span class="num">03</span>Heurísticas</a>
+      <a class="tab" href="wcag.html"><span class="num">04</span>WCAG &amp; Cores</a>
+      <a class="tab" href="uxui-dev.html"><span class="num">05</span>UX/UI Dev</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ruler-wrap"><div class="ruler"></div></div>
+
+<main class="frame">
+  <span class="frame-tag">FRAME 04/05 · WCAG &amp; CORES</span>
+
+  <section class="hero">
+    <h1>WCAG e paletas de cores acessíveis</h1>
+    <p class="lead">Diretrizes que definem o que significa uma interface acessível — e uma das
+    aplicações mais diretas delas: garantir contraste suficiente entre texto e fundo.</p>
+  </section>
+
+  <article class="content">
+    <h2>O que é WCAG</h2>
+    <p>WCAG (<em>Web Content Accessibility Guidelines</em>) é o conjunto de diretrizes de
+    acessibilidade para conteúdo web, mantido pelo W3C. O objetivo é garantir que sites e aplicativos
+    possam ser usados por pessoas com diferentes tipos de deficiência — visual, auditiva, motora ou
+    cognitiva — e não apenas pelo perfil de usuário "padrão" que a equipe de design costuma imaginar.</p>
+    <p>As diretrizes se organizam em quatro princípios, lembrados pela sigla <strong>POUR</strong>:
+    conteúdo deve ser <strong>P</strong>erceptível, <strong>O</strong>perável, <strong>U</strong>tilizável
+    (compreensível) e <strong>R</strong>obusto o bastante para funcionar em diferentes tecnologias
+    assistivas.</p>
+
+    <h2>Níveis de conformidade</h2>
+    <ul>
+      <li><strong>Nível A</strong> — o mínimo necessário; sem ele, partes do conteúdo simplesmente não funcionam para algumas pessoas.</li>
+      <li><strong>Nível AA</strong> — o nível exigido na maioria das leis e políticas de acessibilidade; é o alvo prático da maior parte dos projetos.</li>
+      <li><strong>Nível AAA</strong> — o mais rigoroso; nem sempre é possível aplicá-lo a um site inteiro, mas vale como referência para conteúdos críticos.</li>
+    </ul>
+
+    <h2>Contraste de cores</h2>
+    <p>Um dos critérios mais concretos do WCAG é o contraste entre a cor do texto e a cor do fundo,
+    medido como uma razão que vai de 1:1 (sem contraste algum) a 21:1 (preto sobre branco). No nível
+    <strong>AA</strong>, o mínimo é <strong>4.5:1</strong> para texto normal e <strong>3:1</strong>
+    para texto grande (a partir de 18pt, ou 14pt em negrito).</p>
+
+    <div class="tool">
+      <span class="tool-title mono">FERRAMENTA · TESTE DE CONTRASTE</span>
+
+      <div class="tool-row">
+        <div class="tool-field">
+          <label for="bgColor">Cor de fundo</label>
+          <div class="swatch-row">
+            <input type="color" id="bgColor" value="#f3f5f8" aria-label="Selecionar cor de fundo">
+            <input type="text" id="bgText" value="#f3f5f8" aria-label="Hex da cor de fundo">
+          </div>
+        </div>
+        <div class="tool-field">
+          <label for="fgColor">Cor do texto</label>
+          <div class="swatch-row">
+            <input type="color" id="fgColor" value="#3d5afe" aria-label="Selecionar cor do texto">
+            <input type="text" id="fgText" value="#3d5afe" aria-label="Hex da cor do texto">
+          </div>
+        </div>
+      </div>
+
+      <div id="contrastPreview">
+        <p class="big">Texto de exemplo</p>
+        <p style="margin:0;">Assim ficaria um parágrafo com essas duas cores lado a lado.</p>
+      </div>
+
+      <div class="tool-results">
+        <span class="ratio-badge" id="ratioBadge">— : 1</span>
+        <span class="pass-badge" id="normalBadge">AA — texto normal</span>
+        <span class="pass-badge" id="largeBadge">AA — texto grande</span>
+      </div>
+    </div>
+
+    <h2>Paletas de cores acessíveis</h2>
+    <p>Escolher uma paleta acessível não significa abrir mão de personalidade visual — significa
+    verificar, desde o início, se as combinações de cor planejadas para texto e fundo passam no
+    contraste mínimo. Uma prática comum é definir uma cor de "tinta" bem escura e uma de "papel" bem
+    clara como base de todo o texto, reservando tons mais saturados apenas para acentos e elementos
+    de destaque, que costumam ter menos texto sobre eles.</p>
+    <div class="palette-row">
+      <div class="swatch">
+        <div class="swatch-box" style="background:#10131A;"></div>
+        <span class="mono">#10131A</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#F3F5F8; border:1px solid #ddd;"></div>
+        <span class="mono">#F3F5F8</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#3D5AFE;"></div>
+        <span class="mono">#3D5AFE</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-box" style="background:#FF3B5C;"></div>
+        <span class="mono">#FF3B5C</span>
+      </div>
+    </div>
+
+    <div class="resource red">
+      <span class="resource-label mono">RECURSO EXTERNO</span>
+      <p>Para uma referência completa das diretrizes WCAG em português, com explicações e exemplos
+      práticos de cada critério:</p>
+      <a href="https://guia-wcag.com/" target="_blank" rel="noopener noreferrer">guia-wcag.com →</a>
+    </div>
+
+    <hr class="section-divider">
+
+    <a class="next-page" href="uxui-dev.html">
+      <span>
+        <span class="np-label">PRÓXIMO FRAME · 05/05</span>
+        <span class="np-title">UX/UI no Desenvolvimento de Interfaces</span>
+      </span>
+      <span class="np-arrow">→</span>
+    </a>
+  </article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>UX/IHC LAB — material de estudo, não afiliado a NN/g, Figma ou W3C.</span>
+    <span>05 frames · HTML, CSS e JS</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

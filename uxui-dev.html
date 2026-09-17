@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UX/UI no Desenvolvimento — UX/IHC Lab</title>
+<meta name="description" content="Como decisões de UX e UI se tornam código: design systems, handoff, prototipagem e acessibilidade na prática.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span>
+      <span class="brand-name">UX/IHC LAB</span>
+    </a>
+    <nav class="tabs" aria-label="Navegação principal">
+      <a class="tab" href="index.html"><span class="num">00</span>Início</a>
+      <a class="tab" href="ihc.html"><span class="num">01</span>IHC</a>
+      <a class="tab" href="design-thinking.html"><span class="num">02</span>Design Thinking</a>
+      <a class="tab" href="heuristicas.html"><span class="num">03</span>Heurísticas</a>
+      <a class="tab" href="wcag.html"><span class="num">04</span>WCAG &amp; Cores</a>
+      <a class="tab" href="uxui-dev.html"><span class="num">05</span>UX/UI Dev</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ruler-wrap"><div class="ruler"></div></div>
+
+<main class="frame">
+  <span class="frame-tag">FRAME 05/05 · UX/UI DEV</span>
+
+  <section class="hero">
+    <h1>UX/UI no desenvolvimento de interfaces</h1>
+    <p class="lead">O momento em que decisões de design deixam de ser um arquivo do Figma e passam a
+    ser HTML, CSS e JavaScript rodando de verdade.</p>
+  </section>
+
+  <article class="content">
+    <h2>UX e UI não são a mesma coisa</h2>
+    <p>É comum tratar "UX/UI" como um único termo, mas eles respondem perguntas diferentes. UX
+    (<em>User Experience</em>) pergunta: essa pessoa consegue atingir o objetivo dela usando este
+    produto, de forma clara e sem frustração? UI (<em>User Interface</em>) pergunta: como essa tela
+    específica deveria parecer e se comportar — cores, tipografia, espaçamento, estados de um botão?
+    UX pensa no fluxo inteiro; UI desenha o que fica na tela em cada passo desse fluxo.</p>
+
+    <h2>Do protótipo ao código</h2>
+    <p>Depois que um fluxo passa pelas fases de Design Thinking e é validado com usuários, ele
+    normalmente existe como um protótipo — em uma ferramenta como o Figma. A partir daí, alguém
+    (ou a mesma pessoa) precisa traduzir aquele protótipo estático em uma interface real, funcional,
+    escrita em HTML, CSS e JavaScript. Esse processo é chamado de <strong>handoff</strong>, e é onde
+    boa parte dos problemas de usabilidade aparece: uma sombra, um espaçamento ou um estado de hover
+    que existia no protótipo pode se perder na implementação se não houver comunicação clara entre
+    quem desenhou e quem programou.</p>
+
+    <h2>Design systems</h2>
+    <p>Para reduzir essa perda entre design e código, times de produto costumam manter um
+    <strong>design system</strong>: um conjunto documentado de cores, tipografia, espaçamentos e
+    componentes reutilizáveis (botões, campos de formulário, cartões) que existe tanto no Figma quanto
+    no código. Isso é, na prática, a heurística de "consistência e padrões" (frame anterior) aplicada
+    em escala — cada botão se comporta da mesma forma porque vem da mesma origem.</p>
+
+    <h2>Acessibilidade não é uma etapa final</h2>
+    <p>Um erro comum é tratar acessibilidade como uma revisão de última hora, feita depois que a
+    interface já está pronta. Na prática, boa parte das diretrizes WCAG (frame anterior) só funciona
+    bem quando é decidida durante o desenvolvimento: usar elementos HTML semânticos (<code
+    class="mono">&lt;button&gt;</code> em vez de uma <code class="mono">&lt;div&gt;</code> clicável),
+    manter uma ordem lógica de navegação por teclado, garantir contraste de cor desde a escolha da
+    paleta, e escrever texto alternativo para imagens que carreguem informação.</p>
+
+    <h2>Prototipação também é código</h2>
+    <p>Nem todo protótipo precisa nascer em uma ferramenta visual. Protótipos em HTML/CSS/JS — mesmo
+    simples, como este próprio site — servem para testar comportamento real: como um menu se comporta
+    ao encolher a tela, como um formulário reage a um erro de preenchimento, como o foco do teclado se
+    move entre elementos. Esse tipo de teste só é totalmente confiável em código, porque é isso que a
+    pessoa vai efetivamente usar no final.</p>
+
+    <h2>Fechando o ciclo</h2>
+    <p>IHC dá a base teórica; Design Thinking dá o processo; as heurísticas de Nielsen dão os
+    critérios para avaliar o resultado; o WCAG garante que esse resultado funcione para o maior número
+    possível de pessoas; e o desenvolvimento de interfaces é onde tudo isso, finalmente, vira algo que
+    pode ser clicado, tocado e usado.</p>
+
+    <hr class="section-divider">
+
+    <a class="next-page" href="index.html">
+      <span>
+        <span class="np-label">VOLTAR</span>
+        <span class="np-title">Início</span>
+      </span>
+      <span class="np-arrow">→</span>
+    </a>
+  </article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>UX/IHC LAB — material de estudo, não afiliado a NN/g, Figma ou W3C.</span>
+    <span>05 frames · HTML, CSS e JS</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
